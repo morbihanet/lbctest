@@ -1,0 +1,33 @@
+version: '2.1'
+services:
+  app:
+    image: rueduphp/php72devlatest:first
+    volumes:
+      - .:/var/www
+    ports:
+      - "8080:80"
+    depends_on:
+      - mysql
+    links:
+      - mysql
+    environment:
+      - DB_HOST=mysql
+      - DB_USERNAME=lbc
+      - DB_DATABASE=lbc
+      - DB_PASSWORD=lbc
+      - APP_ENV=local
+      - APP_NAME=Le Bon Coin
+      - APP_URL=lbc.local
+
+  mysql:
+    image: mariadb
+    volumes:
+    - ./docker/mysql:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=lbc
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_DATABASE=lbc
+      - MYSQL_USER=lbc
+      - MYSQL_PASSWORD=lbc
+    ports:
+      - "3399:3306"
