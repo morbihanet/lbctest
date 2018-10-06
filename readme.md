@@ -13,6 +13,8 @@ Une fois sur la machine, taper dans l'ordre
 
 ``docker-compose down && docker-compose run app bash``
 
+``php artisan key:generate``
+
 ``php artisan LBC:start``
 
 ``exit``
@@ -20,6 +22,10 @@ Une fois sur la machine, taper dans l'ordre
 ``docker-compose down && docker-compose up -d``
 
 Après se rendre sur un navigateur à l'adresse 0.0.0.0:8080
+
+L'email est ``admin@admin.com``
+
+Le mot de passe est ``1234``
 
 ### Tests unitaires
 
