@@ -35,4 +35,12 @@ Les tests unitaires se lancent avec Docker
 
 ``php vendor/bin/phpunit``
 
+### Bases de données
+
+Les mogrations et le seeding sont effectués par la commande LBC:start
+
+Deux fichiers sont présents à la racine du projet
+
+- data.sql
+- data.png
 
